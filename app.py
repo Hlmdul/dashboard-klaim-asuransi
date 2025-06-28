@@ -718,6 +718,10 @@ st.markdown(
     <div style='text-align: center; color: #1565c0; font-weight: 500;'>
     Project VisDat - Dashboard Klaim Asuransi Kesehatan<br>
     Dibuat dengan menggunakan Streamlit
+    Disusun Oleh:
+    Jamaluddin Almandili Hasibuan (0110223248) 
+    Hilmi Abdullah (0110223313) 
+    Pathi (0110223068)
     </div>
     """, 
     unsafe_allow_html=True
