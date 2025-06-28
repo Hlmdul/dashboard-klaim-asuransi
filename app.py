@@ -39,13 +39,14 @@ st.markdown("""
     
     .main-header {
         font-family: 'Poppins', sans-serif;
-        font-size: 3.2rem;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
         font-weight: 700;
         color: #1f4e79;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         letter-spacing: -0.02em;
+        line-height: 1.2;
     }
     
     .metric-card {
@@ -116,12 +117,14 @@ st.markdown("""
         margin: 1rem 0;
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         overflow: hidden;
+        width: 100%;
     }
     
     .metrics-table {
         display: table;
         width: 100%;
         table-layout: fixed;
+        border-collapse: collapse;
     }
     
     .metrics-header {
@@ -136,7 +139,7 @@ st.markdown("""
     
     .metrics-cell {
         display: table-cell;
-        padding: 1.5rem;
+        padding: clamp(0.8rem, 2vw, 1.2rem);
         text-align: center;
         border-right: 1px solid #e0e7ff;
         vertical-align: middle;
@@ -147,44 +150,53 @@ st.markdown("""
     }
     
     .metrics-cell h3 {
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 0.3rem 0;
         font-family: 'Poppins', sans-serif;
-        font-size: 1.1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
         color: #1565c0;
         font-weight: 600;
         letter-spacing: -0.01em;
+        line-height: 1.3;
     }
     
     .metrics-cell .value {
         font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
         font-weight: 700;
         color: #333333;
-        margin: 0.5rem 0;
+        margin: 0.3rem 0;
         letter-spacing: -0.01em;
+        line-height: 1.2;
     }
     
     .metrics-cell .delta {
         font-family: 'Inter', sans-serif;
-        font-size: 0.95rem;
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
         color: #666666;
         margin: 0;
         font-weight: 400;
+        line-height: 1.3;
     }
     
     /* Section headers */
     h2 {
         font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
         font-weight: 600 !important;
         color: #1f4e79 !important;
         letter-spacing: -0.01em !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
     }
     
     h3 {
         font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem) !important;
         font-weight: 500 !important;
         color: #1565c0 !important;
         letter-spacing: -0.01em !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.8rem !important;
     }
     
     /* Body text */
@@ -208,6 +220,64 @@ st.markdown("""
     .stSelectbox label {
         font-family: 'Inter', sans-serif !important;
         font-weight: 500 !important;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .main-header {
+            font-size: 1.8rem !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .metrics-container {
+            margin: 0.5rem 0 !important;
+        }
+        
+        .metrics-cell {
+            padding: 0.8rem 0.5rem !important;
+        }
+        
+        .metrics-cell h3 {
+            font-size: 0.9rem !important;
+        }
+        
+        .metrics-cell .value {
+            font-size: 1.3rem !important;
+        }
+        
+        .metrics-cell .delta {
+            font-size: 0.75rem !important;
+        }
+        
+        h2 {
+            font-size: 1.3rem !important;
+        }
+        
+        h3 {
+            font-size: 1.1rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .main-header {
+            font-size: 1.5rem !important;
+        }
+        
+        .metrics-cell {
+            padding: 0.6rem 0.3rem !important;
+        }
+        
+        .metrics-cell h3 {
+            font-size: 0.8rem !important;
+        }
+        
+        .metrics-cell .value {
+            font-size: 1.1rem !important;
+        }
+        
+        .metrics-cell .delta {
+            font-size: 0.7rem !important;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
