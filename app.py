@@ -439,8 +439,13 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; color: #1565c0; font-weight: 500; padding: 20px;'>
-    📊 Project VisDat - Dashboard Klaim Asuransi Kesehatan<br>
-    Dibuat dengan ❤️ menggunakan Streamlit
+    Project VisDat - Dashboard Klaim Asuransi Kesehatan<br>
+    Dibuat dengan menggunakan Streamlit<br>
+    Disusun Oleh:
+    Jamaluddin Almandili Hasibuan (0110223248)<br> 
+    Hilmi Abdullah (0110223313)<br> 
+    Pathi (0110223068)<br>
+
     </div>
     """, 
     unsafe_allow_html=True
